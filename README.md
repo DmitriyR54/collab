@@ -1,14 +1,11 @@
-# project-template
+# collab
 
-My basic setup for web applications.
+Collab - The platform for a better cooperation. Personal portfolio project. Type - landing page.
 
-Useful resources:
+Design template - https://www.figma.com/file/eZHdBXE9jAJkWVNyULhGi6/
 
-1. Icons:
-    - https://icons8.com/
-    - https://www.svgrepo.com/
-    - https://iconscout.com/icons/
-    - https://freeicons.io/
-    - https://heroicons.com/ (tailwind icons)
-    - https://icons.getbootstrap.com/
-2. Images transpiler - https://squoosh.app/
+Used libraries and services:
+
+1. Images transpiler - https://squoosh.app/
+
+Developer - https://dmitriyr54.github.io/portfolio/

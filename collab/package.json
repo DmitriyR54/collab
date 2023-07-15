@@ -1,6 +1,6 @@
 {
-    "name": "project-template",
-    "description": "My basic setup for web applications",
+    "name": "collab",
+    "description": "Collab - The platform for a better cooperation. Personal portfolio project. Type - landing page.",
     "main": "src/pages/Home/Home.js",
     "scripts": {
         "start": "webpack serve --open --config webpack.dev.js",
@@ -8,13 +8,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/DmitriyR54/project-template"
+        "url": "https://github.com/DmitriyR54/collab"
     },
     "author": "DmitriyR54",
-    "bugs": {
-        "url": "https://github.com/DmitriyR54/project-template/issues"
-    },
-    "homepage": "https://github.com/DmitriyR54/project-template#readme",
     "browserslist": ">= 0.5%, last 2 major versions, not dead, Chrome >= 60, Firefox >= 60, Firefox ESR, iOS >= 12, Safari >= 12, not Explorer <= 11",
     "devDependencies": {
         "@babel/core": "^7.17.9",
