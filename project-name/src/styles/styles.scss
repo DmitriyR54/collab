@@ -1,0 +1,47 @@
+/* fonts */
+@use '../assets/fonts/fonts.scss';
+/* variables */
+@use './_vars.scss' as *;
+
+*,
+*::before,
+*::after {
+    /* reset default styles */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    /* set common styles */
+    color: inherit;
+    line-height: 150%;
+    text-wrap: balance;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* main size container */
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $lg) {
+}
+
+/* tablets */
+@media (max-width: $md) {
+}
+
+/* mobile phones */
+@media (max-width: $sm) {
+}

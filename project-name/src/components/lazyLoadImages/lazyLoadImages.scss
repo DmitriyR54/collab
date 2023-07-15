@@ -1,0 +1,55 @@
+@use '../../styles/vars';
+
+.lazy-image {
+    max-width: 100%;
+    background-color: #d9d9d9;
+    border: 4px solid #141414;
+    border-radius: 2px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 100px;
+        max-width: 50%;
+        background-image: url('./img/image-placeholder.svg');
+        background-size: cover;
+        transform: translate(-50%, -50%);
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+    }
+
+    &.image-loaded {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+
+        &::before {
+            display: none;
+        }
+
+        img {
+            opacity: 1;
+        }
+    }
+}
+
+.lazy-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: 0.35s ease-out;
+    transition-property: opacity;
+    position: relative;
+    z-index: 2;
+}
+
+.lazy-image figcaption {
+    margin-top: 10px;
+    color: #141414;
+}
