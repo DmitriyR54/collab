@@ -10,3 +10,29 @@
     font-weight: 400;
 }
 */
+
+// Montserrat
+@font-face {
+    src: local('Montserrat'), url('./Montserrat/montserrat-500.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+}
+
+// Exo 2
+@font-face {
+    src: local('Exo 2'), url('./Exo-2/exo-2-400.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    src: local('Exo 2'), url('./Exo-2/exo-2-700.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+}
