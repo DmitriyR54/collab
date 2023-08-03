@@ -1,18 +1,21 @@
-/* screen sizes */
+// screen sizes
 $lg: 1024px;
 $md: 768px;
 $sm: 576px;
 
-/* colors */
+// colors
 $black: #353738;
 $white: #ffffff;
 $grey-light: #9da1a6;
 $grey: #5e6163;
 $grey-dark: #4b4d4f;
-$blue: #5022e2;
+$purple: #6152FF;
 $orange: #fe9a52;
-$red: #ff5748;
+$red: #FD7D72;
 
-/* fonts */
+// fonts
 $montserrat: 'Montserrat', sans-serif;
 $exo2: 'Exo 2', sans-serif;
+
+// other
+$transition: 0.25s ease-out;

@@ -1,5 +1,6 @@
 // styles
 import 'modern-normalize/modern-normalize.css';
+import '../../assets/fonts/fonts.scss';
 import 'Src/styles/styles.scss';
 import './Home.scss';
 // components

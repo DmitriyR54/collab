@@ -1,7 +1,7 @@
-/* fonts */
-@use '../assets/fonts/fonts.scss';
 /* variables */
 @use './_vars.scss' as *;
+/* components */
+@use '../components/button/button.scss';
 
 *,
 *::before,
@@ -13,6 +13,8 @@
     list-style: none;
     /* set common styles */
     color: inherit;
+    font-size: 16px;
+    font-family: $exo2;
     line-height: 150%;
     text-wrap: balance;
 }
@@ -25,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #fff;
+    background-color: $white;
 }
 
 /* main size container */

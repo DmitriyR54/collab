@@ -1,0 +1,98 @@
+@use '../../styles/vars' as *;
+
+.btn {
+    display: flex;
+    align-items: start;
+    column-gap: 10px;
+    flex-shrink: 0;
+    width: fit-content;
+    padding: 10px 20px;
+    color: $white;
+    border-radius: 4px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    transition: $transition;
+    transition-property: color, background-color, transform;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    // background
+    &::before {
+        content: '';
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(254, 154, 82, 1) 0%, rgba(255, 87, 72, 1) 50%);
+        transition: $transition;
+        transition-property: transform;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    // active state
+    &:hover,
+    &:focus {
+        &::before {
+            transform: translate3d(-45%, 0, 0);
+        }
+    }
+
+    &:active {
+        transform: scale(0.99);
+    }
+}
+
+// main content (text or a single icon )
+.btn > span {
+    position: relative;
+    z-index: 2;
+}
+
+// icon
+// all icons
+.btn svg {
+    display: block;
+    width: 16px;
+}
+
+// only the icon-sibling of the text span
+.btn > svg {
+    margin-top: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+// modificators
+.btn--secondary {
+    color: $red;
+    background-color: $white;
+    border: 1px solid $orange;
+
+    // background
+    &::before {
+        display: none;
+    }
+
+    // active state
+    &:hover,
+    &:focus {
+        background-color: rgba($red, 0.2);
+        border-color: $red;
+    }
+}
+
+// screen adaptation
+// tablet
+@media (max-width: $md) {
+    .btn {
+        padding: 5px 10px;
+    }
+
+    // main content (text or a single icon )
+    .btn > span {
+        font-size: 14px;
+    }
+}
