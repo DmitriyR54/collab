@@ -8,15 +8,16 @@ const lazyLoadImages = () => {
             if (entry.isIntersecting) {
                 // <figure> element
                 const imageWrapper = entry.target;
+
                 // children <img> element
                 const image = imageWrapper.querySelector('img');
-
                 const dataSrc = image.getAttribute('data-src');
 
+                // download the image
                 import(/* webpackMode: "eager" */ `Src/assets/images/lazyload/${dataSrc}`).then((src) => {
                     image.setAttribute('src', src.default);
                     image.addEventListener('load', () => {
-                        imageWrapper.classList.add('image-loaded');
+                        imageWrapper.classList.add('image--loaded');
                     });
                 });
 
@@ -25,6 +26,7 @@ const lazyLoadImages = () => {
         });
     };
 
+    // observer options
     const options = {
         threshold: 0.2,
     };

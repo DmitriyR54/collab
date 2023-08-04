@@ -1,22 +1,29 @@
-/* variables */
-@use './_vars.scss' as *;
-/* components */
+// variables
+@use './_vars' as *;
+// components
+@use './typography.scss';
 @use '../components/button/button.scss';
 
 *,
 *::before,
 *::after {
-    /* reset default styles */
+    // reset default styles
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-    /* set common styles */
+    // set common styles
     color: inherit;
     font-size: 16px;
     font-family: $exo2;
     line-height: 150%;
     text-wrap: balance;
+}
+
+// color of the selected text
+::selection {
+    color: $white;
+    background-color: $purple;
 }
 
 html {
@@ -30,21 +37,21 @@ body {
     background-color: $white;
 }
 
-/* main size container */
+// main size container
 .container {
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* SCREEN ADAPTATION */
+// screen adaptation
 @media (max-width: $lg) {
 }
 
-/* tablets */
+// tablets
 @media (max-width: $md) {
 }
 
-/* mobile phones */
+// mobile phones
 @media (max-width: $sm) {
 }

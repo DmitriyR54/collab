@@ -15,7 +15,7 @@
         content: '';
         width: 100%;
         height: 2px;
-        background: linear-gradient(90deg, #fe9a52, #ff8059, #ff636a, #ff4582, #ff2ba0, #e627c1, #b73ce2, #6152ff);
+        background: linear-gradient(90deg, #fe9a52, #ff7b52, #ff565d, #ff2470, #f40089, #d800a7, #a900c6, #5022e2);
         position: absolute;
         bottom: -2px;
         z-index: 1;
@@ -124,9 +124,6 @@
 
     // logotype
     .header__logo {
-        position: relative;
-        z-index: 2;
-
         img {
             height: 42px;
         }
@@ -145,12 +142,24 @@
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 1;
+        z-index: 2;
 
         // shown navigation
         &.header__nav--active {
             transform: translate3d(0, 0, 0);
             visibility: visible;
+        }
+
+        // the bottom border
+        &::after {
+            content: '';
+            height: 2px;
+            background: linear-gradient(90deg, #fe9a52, #ff7b52, #ff565d, #ff2470, #f40089, #d800a7, #a900c6, #5022e2);
+            position: absolute;
+            top: 62px;
+            left: 0;
+            right: 0;
+            z-index: 1;
         }
     }
 
@@ -173,7 +182,7 @@
 
     // hide the navigation button
     .header__nav-menu-btn--hide {
-        margin: 0 0 120px auto;
+        margin: 0 0 150px auto;
     }
 
     // download button (small screens)

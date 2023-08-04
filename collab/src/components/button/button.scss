@@ -9,7 +9,7 @@
     padding: 10px 20px;
     color: $white;
     border-radius: 4px;
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     transition: $transition;
@@ -48,40 +48,57 @@
 // main content (text or a single icon )
 .btn > span {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 // icon
 // all icons
 .btn svg {
     display: block;
-    width: 16px;
+    width: 20px;
 }
 
 // only the icon-sibling of the text span
 .btn > svg {
-    margin-top: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 // modificators
 .btn--secondary {
     color: $red;
-    background-color: $white;
-    border: 1px solid $orange;
 
-    // background
-    &::before {
-        display: none;
+    // white background
+    &::after {
+        content: '';
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        background: $white;
+        border-radius: 2px;
+        transition: $transition;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        z-index: 2;
     }
 
     // active state
     &:hover,
     &:focus {
-        background-color: rgba($red, 0.2);
-        border-color: $red;
+        // white background
+        &::after {
+            background-color: rgba($white, 0.9);
+        }
     }
+}
+
+// wrapper for a group of the buttons
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 // screen adaptation
@@ -89,10 +106,5 @@
 @media (max-width: $md) {
     .btn {
         padding: 5px 10px;
-    }
-
-    // main content (text or a single icon )
-    .btn > span {
-        font-size: 14px;
     }
 }

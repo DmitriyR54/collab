@@ -5,10 +5,10 @@ import 'Src/styles/styles.scss';
 import './Home.scss';
 // components
 import { lazyLoadImages } from 'Components/lazyLoadImages/lazyLoadImages';
-import 'Components/lazyLoadImages/lazyLoadImages.scss';
 import { hideLoadingScreen } from 'Sections/LoadingScreen/LoadingScreen';
 // sections
 import 'Sections/Header/Header';
+import 'Sections/Intro/Intro.scss';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
