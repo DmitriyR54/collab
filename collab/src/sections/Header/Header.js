@@ -8,7 +8,11 @@ const navMenu = header.querySelector('.header__nav');
 const showMenuBtn = header.querySelector('.header__nav-menu-btn--show');
 const hideMenuBtn = header.querySelector('.header__nav-menu-btn--hide');
 
+let isActive = false;
+
 function showMenu() {
+    isActive = true;
+
     document.body.style.overflow = 'hidden';
 
     header.style.bottom = 0;
@@ -18,6 +22,8 @@ function showMenu() {
 }
 
 function hideMenu() {
+    isActive = false;
+
     setTimeout(() => {
         document.body.style.overflow = 'auto';
 
@@ -30,6 +36,13 @@ function hideMenu() {
 
 showMenuBtn.addEventListener('click', showMenu);
 hideMenuBtn.addEventListener('click', hideMenu);
+
+// hide the menu on resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && isActive) {
+        hideMenu();
+    }
+});
 
 // hide/show the header during scroll
 let scrollValue = null;
