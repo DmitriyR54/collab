@@ -28,8 +28,9 @@
     z-index: 1;
 }
 
+// star
 .intro__illustration-star {
-    animation: starAnim infinite ease-out;
+    animation: starAnim infinite ease-in-out;
     position: absolute;
     z-index: 2;
 
@@ -54,11 +55,9 @@
     0% {
         transform: rotate(0deg) scale(1);
     }
-    40%,
     50% {
-        transform: rotate(180deg) scale(1.5);
+        transform: rotate(180deg) scale(2);
     }
-    90%,
     100% {
         transform: rotate(360deg) scale(1);
     }

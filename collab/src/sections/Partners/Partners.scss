@@ -1,0 +1,69 @@
+@use '../../styles/vars' as *;
+
+.partners {
+    background-color: #ffebdc;
+
+    // show the logotypes
+    &.partners--active {
+        .partners__logo {
+            animation: showLogo 0.5s linear forwards;
+        }
+    }
+}
+
+.partners__inner {
+    padding: 50px 0;
+}
+
+// wrapper for the logotypes
+.partners__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 80px;
+}
+
+.partners__logo {
+    opacity: 0;
+}
+
+// sass loop
+@for $i from 1 through 5 {
+    .partners__logo:nth-child(#{$i}) {
+        animation-delay: $i * 0.2s;
+    }
+}
+
+// animation
+@keyframes showLogo {
+    to {
+        opacity: 1;
+    }
+}
+
+// screen adaptation
+@media (max-width: $lg) {
+    .partners__wrapper {
+        gap: 40px;
+    }
+}
+
+// tablet
+@media (max-width: $md) {
+    .partners__wrapper {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    .partners__logo {
+        width: 33.333%;
+        margin: 0 auto;
+    }
+}
+
+// phone
+@media (max-width: $sm) {
+    .partners__logo {
+        width: 50%;
+    }
+}
