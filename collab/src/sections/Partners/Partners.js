@@ -1,6 +1,6 @@
 import './Partners.scss';
 
-const section = document.querySelector('.partners');
+const section = document.querySelector('.partners__wrapper');
 
 // observer function
 const callback = (entries, observer) => {

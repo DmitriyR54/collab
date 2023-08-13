@@ -12,5 +12,6 @@ Used libraries and services:
 4. Illustrations
     - https://iconscout.com/illustration/business-meeting-8044151
     - https://iconscout.com/illustration/business-discussion-8044149
+5. SVG for CSS compiler - https://yoksel.github.io/url-encoder/
 
-Developer - https://dmitriyr54.github.io/portfolio/
+Developer - https://dmytror52.github.io/portfolio/

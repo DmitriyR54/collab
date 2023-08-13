@@ -2,6 +2,7 @@
 
 // title
 .title {
+    max-width: 650px;
     margin-bottom: 25px;
     color: $black;
     font-size: 36px;
@@ -15,12 +16,14 @@
         font-size: 42px;
     }
 
-    // purple title
+    // purple
     &.title--alt {
         color: $purple;
     }
 
+    // centered
     &.title--center {
+        max-width: none;
         margin-bottom: 50px;
         text-align: center;
     }
@@ -28,7 +31,7 @@
 
 // text above the title
 .title-caption {
-    color: $grey;
+    color: $purple;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -37,7 +40,7 @@
 
     // purple text
     &.title-caption--alt {
-        color: $purple;
+        color: $grey;
     }
 }
 

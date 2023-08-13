@@ -16,7 +16,6 @@ function showMenu() {
     document.body.style.overflow = 'hidden';
 
     header.style.bottom = 0;
-    header.style.background = 'transparent';
 
     navMenu.classList.add('header__nav--active');
 }
@@ -28,8 +27,7 @@ function hideMenu() {
         document.body.style.overflow = 'auto';
 
         header.style.bottom = 'auto';
-        header.style.background = '#fff';
-    }, 250);
+    }, 200);
 
     navMenu.classList.remove('header__nav--active');
 }
@@ -47,17 +45,19 @@ window.addEventListener('resize', () => {
 // hide/show the header during scroll
 let scrollValue = null;
 
-document.addEventListener('scroll', (e) => {
-    if (!scrollValue) {
-        scrollValue = window.scrollY;
-    } else {
-        if (window.scrollY > scrollValue) {
-            // scrolling down
-            header.style.transform = `translate3d(0, -100%, 0)`;
+if (!isActive) {
+    document.addEventListener('scroll', (e) => {
+        if (!scrollValue) {
+            scrollValue = window.scrollY;
         } else {
-            // scrolling up
-            header.style.transform = `translate3d(0, 0, 0)`;
+            if (window.scrollY > scrollValue) {
+                // scrolling down
+                header.style.transform = `translate3d(0, -100%, 0)`;
+            } else {
+                // scrolling up
+                header.style.transform = `translate3d(0, 0, 0)`;
+            }
+            scrollValue = window.scrollY;
         }
-        scrollValue = window.scrollY;
-    }
-});
+    });
+}

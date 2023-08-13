@@ -10,6 +10,7 @@ import { hideLoadingScreen } from 'Sections/LoadingScreen/LoadingScreen';
 import 'Sections/Header/Header';
 import 'Sections/Intro/Intro.scss';
 import 'Sections/Partners/Partners';
+import 'Sections/Features/Features';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {

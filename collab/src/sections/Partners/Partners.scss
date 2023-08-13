@@ -2,17 +2,8 @@
 
 .partners {
     background-color: #ffebdc;
-
-    // show the logotypes
-    &.partners--active {
-        .partners__logo {
-            animation: showLogo 0.5s linear forwards;
-        }
-    }
-}
-
-.partners__inner {
-    padding: 50px 0;
+    position: relative;
+    z-index: 1;
 }
 
 // wrapper for the logotypes
@@ -21,8 +12,18 @@
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     gap: 80px;
+
+    // show the logotypes
+    &.partners--active {
+        .partners__logo {
+            animation-duration: 0.15s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+    }
 }
 
+// logotype
 .partners__logo {
     opacity: 0;
 }
@@ -30,7 +31,8 @@
 // sass loop
 @for $i from 1 through 5 {
     .partners__logo:nth-child(#{$i}) {
-        animation-delay: $i * 0.2s;
+        animation-name: showLogo;
+        animation-delay: calc($i * 0.1s);
     }
 }
 
@@ -43,6 +45,7 @@
 
 // screen adaptation
 @media (max-width: $lg) {
+    // wrapper for the logotypes
     .partners__wrapper {
         gap: 40px;
     }
@@ -50,20 +53,15 @@
 
 // tablet
 @media (max-width: $md) {
+    // wrapper for the logotypes
     .partners__wrapper {
         grid-template-columns: 1fr;
-        gap: 80px;
+        gap: 50px;
     }
 
+    // logotype
     .partners__logo {
-        width: 33.333%;
+        width: 150px;
         margin: 0 auto;
-    }
-}
-
-// phone
-@media (max-width: $sm) {
-    .partners__logo {
-        width: 50%;
     }
 }
