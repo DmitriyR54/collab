@@ -27,6 +27,12 @@
         margin-bottom: 50px;
         text-align: center;
     }
+
+    // small
+    &.title--sm {
+        margin-bottom: 0;
+        font-size: 18px;
+    }
 }
 
 // text above the title
@@ -53,7 +59,11 @@
 .paragraph {
     color: $black;
     font-family: $montserrat;
-    font-size: 18px;
+    font-size: 16px;
+
+    &.paragraph--sm {
+        font-size: 14px;
+    }
 }
 
 // screen adaptation
@@ -69,6 +79,11 @@
         &.title--main {
             font-size: 36px;
         }
+
+        // small
+        &.title--sm {
+            text-align: left;
+        }
     }
 
     // text above the title
@@ -80,10 +95,5 @@
     .subheading {
         margin: 0 auto;
         text-align: center;
-    }
-
-    // default paragraph
-    .paragraph {
-        font-size: 16px;
     }
 }

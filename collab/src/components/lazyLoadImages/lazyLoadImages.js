@@ -28,7 +28,7 @@ const lazyLoadImages = () => {
 
     // observer options
     const options = {
-        threshold: 0.2,
+        threshold: 0.05,
     };
 
     const observer = new IntersectionObserver(callback, options);

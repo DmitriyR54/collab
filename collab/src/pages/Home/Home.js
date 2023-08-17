@@ -11,6 +11,7 @@ import 'Sections/Header/Header';
 import 'Sections/Intro/Intro.scss';
 import 'Sections/Partners/Partners';
 import 'Sections/Features/Features';
+import 'Sections/Testimonials/Testimonials.scss';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
