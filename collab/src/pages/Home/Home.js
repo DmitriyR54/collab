@@ -12,6 +12,7 @@ import 'Sections/Partners/Partners';
 import 'Sections/Features/Features';
 import 'Sections/Testimonials/Testimonials.scss';
 import 'Sections/Banner/Banner.scss';
+import 'Sections/Faq/Faq';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
