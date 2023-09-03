@@ -14,6 +14,7 @@ import 'Sections/Testimonials/Testimonials.scss';
 import 'Sections/Banner/Banner.scss';
 import 'Sections/Faq/Faq';
 import 'Sections/Download/Download.scss';
+import 'Sections/Subscribe/Subscribe.scss';
 import 'Sections/Footer/Footer.scss';
 
 window.addEventListener('DOMContentLoaded', () => {

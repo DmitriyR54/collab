@@ -48,6 +48,11 @@
     &.title-caption--alt {
         color: $grey;
     }
+
+    // centered
+    &.title-caption--center {
+        text-align: center;
+    }
 }
 
 // text below the title
