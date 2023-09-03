@@ -31,10 +31,12 @@ items.forEach((item) => {
         state = !state;
 
         if (state) {
+            // show the content
             setHeight(item);
 
             item.classList.add('accordion__item--active');
         } else {
+            // hide the content
             item.querySelector('.accordion__content-wrapper').style.height = 0;
 
             item.classList.remove('accordion__item--active');

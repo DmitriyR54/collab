@@ -101,16 +101,16 @@
 
 // tablet
 @media (max-width: $md) {
-    // feature section
-    .features__section {
-        // padding: 25px 0;
-    }
-
     // description block
     .features__description {
         flex-direction: column-reverse !important;
         gap: 25px;
         margin-bottom: 25px;
+    }
+
+    // illustration
+    .features__description-img {
+        width: 75%;
     }
 
     // name and description
@@ -143,6 +143,6 @@
 @media (max-width: $sm) {
     // illustration
     .features__description-img {
-        width: 75%;
+        width: 100%;
     }
 }

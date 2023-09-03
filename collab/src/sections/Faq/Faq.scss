@@ -22,7 +22,7 @@
     // arrow
     &.accordion__item--active {
         .accordion__title.title::after {
-            transform: rotate(180deg);
+            transform: scaleY(-1);
         }
     }
 }
